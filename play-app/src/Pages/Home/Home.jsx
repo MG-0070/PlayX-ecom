@@ -1,6 +1,5 @@
 import React from 'react'
-import "./Home.css"
-import { Navbar,Header,Main,Footer } from '../../components'
+import {Header,Main,Footer } from "../../Components"
 
 
 const Home = () => {

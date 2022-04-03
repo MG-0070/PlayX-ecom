@@ -1,13 +1,13 @@
 import React from 'react'
 import "./Main.css"
-import Games from "../../assets/Games.png";
-import console from "../../assets/console.png";
-import ACCESSORIES from "../../assets/ACCESSORIES.png";
-import VR from "../../assets/VR.png";
-import Assasins from "../../assets/Assasins.jpg";
-import playstation5 from "../../assets/playstation5.png"
-import headset from "../../assets/headset.jpg";
-import oculus from "../../assets/oculus.jpg";
+import Games from "../../Assets/Games.png";
+import console from "../../Assets/console.png";
+import ACCESSORIES from "../../Assets/ACCESSORIES.png";
+import VR from "../../Assets/VR.png";
+import Assasins from "../../Assets/Assasins.jpg";
+import playstation5 from "../../Assets/playstation5.png"
+import headset from "../../Assets/headset.jpg";
+import oculus from "../../Assets/oculus.jpg";
 const Main=()=> {
     return (
     <div> 
