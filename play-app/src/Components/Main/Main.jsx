@@ -49,7 +49,7 @@ const Main=()=> {
               <div className='card-body'>
                   <div className='card-sale-info f-s font-l flex flex-center m-xs'>on sale</div>
                   <div className='flex f-m font-l' style={{color: 'var(--secondary-color)'}}>Playstation</div>
-                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु20000</div>
+                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु40000</div>
               </div>
           </a>
           <a href="" className='product-card'>
