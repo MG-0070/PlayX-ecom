@@ -1,0 +1,19 @@
+.aside-container{
+    flex: 1;
+}
+.center-container{
+flex: 4;
+}
+
+
+
+
+
+
+
+
+
+.center-container{
+    justify-content: space-evenly;
+    gap: 1.6rem;
+}

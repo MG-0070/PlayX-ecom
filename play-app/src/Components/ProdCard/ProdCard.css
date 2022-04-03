@@ -1,0 +1,23 @@
+.card-icon:hover{
+    color: var(--danger-color);
+}
+.card-body {
+    justify-content: space-between;
+}
+.card-star{
+    background-color: yellow;
+    border-radius: 20px;
+}
+.card-btn{
+    border: none;
+    width: 100%;
+    background-color: var(--primary-color-hover);
+    cursor: pointer;
+    color: var(--offwhite)
+}
+.card-btn:hover{
+    background-color: var( --primary-color);
+}
+.card-originalPrice{
+    text-decoration: line-through;
+}
