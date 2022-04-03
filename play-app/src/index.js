@@ -1,15 +1,38 @@
+// import React from "react";
+// import ReactDOM from "react-dom";
+// import "./index.css";
+// import App from "./App";
+// import { makeServer } from "./server";
+
+// import { BrowserRouter } from "react-router-dom";
+
+// // Call make Server
+// makeServer();
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//     <App />
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { makeServer } from "./server";
+import { BrowserRouter } from "react-router-dom";
 
 // Call make Server
 makeServer();
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    </BrowserRouter>
+  </React.StrictMode>
 );
+

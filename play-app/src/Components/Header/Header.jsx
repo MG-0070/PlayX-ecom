@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Header.css";
-import dyinglight from "../../assets/dyinglight.jpg";
+import dyinglight from "../../Assets/dyinglight2.jpg";
 import {FaAngleRight} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
