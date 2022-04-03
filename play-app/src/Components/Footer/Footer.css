@@ -1,0 +1,11 @@
+.footer-div{
+    background-color: var(--secondary-color);
+}
+.footer-categ{
+    justify-content: space-around;
+}
+.fotter-content{
+    color: var(--offwhite);
+    line-height: 2rem;
+   
+}

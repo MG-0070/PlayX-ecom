@@ -1,0 +1,45 @@
+.category-container {
+    gap: 2.5rem;
+}
+.category-img{
+    max-width: 5rem;
+    max-height: 5rem;
+    background-color: var(silver);
+}
+.category-game{
+ min-width: 17rem;
+ min-height: 17rem;
+   cursor: pointer;
+   border: 1px solid var(--border-color);
+   box-shadow: 2px 2px 2px 2px var(--boxShadow-color);
+   border-radius: 4px;
+   background-color: white;
+   transition: .3s;
+}
+.category-game:hover{
+    border: 2px solid var(--border-color);
+}
+.product-card{
+    border-radius: 4px;
+    box-shadow: 2px 2px 2px 2px var(--boxShadow-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    height: max-content;
+   transition: .3s;
+} 
+.product-card:hover{
+    box-shadow: 3px var(--boxShadow-color);
+}
+.product-img{
+    width: 16rem;
+    height: 20rem; 
+}
+.card-sale-info{
+    max-width: 5rem;
+    background-color: yellow;
+    color: var(--secondary-color);
+
+}
+.product-container{
+    gap: 2.5rem;
+}

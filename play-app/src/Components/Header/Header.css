@@ -1,0 +1,36 @@
+.scroll-images {
+    max-height: 31.25rem;
+    position: relative;
+    z-index: 1;
+}
+
+.image-slide {
+    width: 100%;
+    height: 31.25rem;
+}
+.scroll-btn {
+    position: absolute;
+    bottom: 12rem;
+    left: 5rem;
+    cursor: pointer;
+    border: 1 px var(--success-color);
+    background-color: var(--success-background);
+    height: 2rem;
+}
+
+.scrll-btn-link{
+    color: var(--success-color)
+}
+
+.header-link-name{
+    max-width: 100%;
+    display: inline-block;
+    color: var(--success-color);
+    align-items: center;
+}
+@media screen and (max-width : 40em){
+    .scroll-btn{
+        bottom: 2rem;
+    left: 8rem;
+    }
+}
