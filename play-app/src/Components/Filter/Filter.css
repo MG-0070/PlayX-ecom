@@ -1,0 +1,22 @@
+.aside-filter{
+    justify-content: space-between;
+}
+.aside-clear{
+    text-decoration: underline;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+.aside-clear:hover{
+    color: var(--primary-color-hover)
+}
+
+.aside-productPrice{
+    justify-content: space-between;
+}
+.aside-slider{
+    width: 100%;
+}
+.checkboxes{
+    align-self: flex-start;
+}

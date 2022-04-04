@@ -1,6 +1,5 @@
 import React from 'react';
-import "./ProdCard.css"
-import Assasins from "../../Assets/Assasins.jpg"
+import "./ProdCard.css";
 import {
   FiHeart,
   FiStar
