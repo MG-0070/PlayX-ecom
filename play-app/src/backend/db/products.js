@@ -20,7 +20,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "PULSE 3D wireless headset",
+    title: "PULSE wireless headset",
     previousPrice: 6000,
     newPrice: 3000,
     categoryName: "Accessories",
@@ -33,8 +33,8 @@ export const products = [
   {
     _id: uuid(),
     title: "Oculus VR",
-    previousPrice: 26000,
-    newPrice: 18200,
+    previousPrice: 8000,
+    newPrice: 5600,
     categoryName: "VR",
     discount : 30,
     rating : 4,
@@ -46,8 +46,8 @@ export const products = [
   {
     _id: uuid(),
     title: "PlayStation 5",
-    previousPrice: 40000,
-    newPrice: 36000,
+    previousPrice: 9000,
+    newPrice: 8100,
     categoryName: "Console",
     discount : 10,
     rating : 4,
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "Watch Dogs + Assasins Creed",
+    title: "WatchDog+AssasinCreed",
     previousPrice: 5000,
     newPrice: 2000,
     categoryName: "Game",
@@ -94,8 +94,8 @@ export const products = [
   {
     _id: uuid(),
     title: "Xbox",
-    previousPrice: 36000 ,
-    newPrice: 33000,
+    previousPrice: 9500 ,
+    newPrice: 8550,
     categoryName: "Console",
     discount : 10,
     rating : 3,
@@ -141,7 +141,7 @@ export const products = [
   },
   {
     _id: uuid(),
-    title: "SONY PLAYSTATION 4 SLIM",
+    title: "SONYPLAYSTATION SLIM",
     previousPrice: 4000,
     newPrice:2800,
     categoryName: "Console",

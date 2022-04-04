@@ -14,7 +14,7 @@
     left: 5rem;
     cursor: pointer;
     border: 1 px var(--success-color);
-    background-color: var(--success-background);
+    background-color: var( --success-background);
     height: 2rem;
 }
 
