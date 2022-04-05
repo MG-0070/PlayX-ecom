@@ -12,7 +12,7 @@ function useAxios(apiPassed){
           setApiData(response.data)
        }
        catch(err){
-          console.log(err )
+          console.log(err ,"data not loaded from server")
        }
        finally{
          setLoader(false)

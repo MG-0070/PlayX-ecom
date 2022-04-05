@@ -1,11 +1,17 @@
 import React from 'react'
 import { Filter } from '../../Components';
 import { ProdCard } from '../../Components/ProdCard/ProdCard';
+import { useProudctFilter } from '../../Context/FilterCont';
 import { useProduct } from '../../Context/ProductCont';
+import {SortedProduct} from "../../Utils/SortedProduct"
 import "./Products.css";
 
 const Products = () => {
-const {prodData} = useProduct()
+const {prodData} = useProduct();
+const {filterState} = useProudctFilter()
+const {sortBy} = filterState;
+console.log(sortBy,"here")
+const sortedData = SortedProduct(prodData,sortBy)
   return (
     <div>
       <div>
@@ -15,12 +21,11 @@ const {prodData} = useProduct()
       <Filter />
     </aside>
     <div className="center-container flex mt-l ml-m mb-l mr-m">
-      {prodData.map(cardData => (
-       <>
+      {sortedData .map(cardData => {
+      return(
       <ProdCard prod={cardData} key={cardData._id}/>
-      </>
       )
-       )}
+    } )}
       </div>
       </main>
       </div>
