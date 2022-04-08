@@ -15,7 +15,7 @@ const Filter = () => {
                 <h2 className="font-l flex f-m mb-s">price</h2>
                 <div className="aside-productPrice pt-s flex"><span>रु300</span><span>रु4500</span><span>रु9000</span>
                 </div>
-                <input type="range" min="300" max="1000"  className="aside-slider mt-s" />
+                <input type="range" min="300" max="9000" onChange={(e) => filterdispatch({type: 'slider',payload : e.target.value})} value={filterState.newPrice} className="aside-slider mt-s" />
             </div>
             <div className="mt-m pl-m  " >
                 <h3 className=" pb-m flex f-m font-l">Category</h3>

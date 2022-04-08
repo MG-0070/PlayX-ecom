@@ -15,6 +15,8 @@ export const ProdutFilterRed=(state,action) =>{
                     return {...state, Console : !state.Console}
                 case "rating":
                     return {...state, rating: action.payload}
+                case "slider":
+                    return {...state, newPrice : action.payload}
         default: 
         return state
     }

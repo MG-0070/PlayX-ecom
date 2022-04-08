@@ -7,14 +7,16 @@ import {SortedProduct} from "../../Utils/SortedProduct"
 import {CategoryList} from  "../../Utils/CategoryList"
 import "./Products.css";
 import { RatingProduct } from '../../Utils/RatingProduct';
+import { sliderProduct } from '../../Utils/sliderProduct';
 
 const Products = () => {
 const {prodData} = useProduct();
 const {filterState} = useProudctFilter()
-const {sortBy,rating} = filterState;
+const {sortBy,rating,newPrice } = filterState;
 const categoryData = CategoryList(prodData,filterState)
 const ratingData = RatingProduct(categoryData,rating)
-const sortedData = SortedProduct(ratingData,sortBy);
+const rangeData = sliderProduct(ratingData,newPrice )
+const sortedData = SortedProduct(rangeData,sortBy);
   return (
     <div>
       <div>
