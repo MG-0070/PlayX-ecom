@@ -17,8 +17,18 @@ export const ProdutFilterRed=(state,action) =>{
                     return {...state, rating: action.payload}
                 case "slider":
                     return {...state, newPrice : action.payload}
-        default: 
-        return state
+                    case "clearAll":
+                        return {
+                            sortBy: "",
+                      Game : false,
+                   Accessories : false,
+                     VR : false,
+                 Console : false,
+                  rating : 0,
+                   newPrice : 0,
+                        }
+                default: 
+               return state
     }
     
 }

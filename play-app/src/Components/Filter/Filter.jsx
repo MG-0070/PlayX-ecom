@@ -9,7 +9,7 @@ const Filter = () => {
     <div className='asideContaner'>
           <ul className="aside-filter pl-m flex flex-row">
                 <h3 className="font-l f-m">Filters</h3>
-                <div className="aside-clear f-m font-l mr-s">Clear</div>
+                <div className="aside-clear f-m font-l mr-s" onClick={() => filterdispatch({type: "clearAll"})}>Clear</div>
             </ul>
             <div className="pl-m pt-m mt-m">
                 <h2 className="font-l flex f-m mb-s">price</h2>
