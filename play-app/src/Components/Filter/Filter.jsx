@@ -6,7 +6,7 @@ import "./Filter.css"
 const Filter = () => {
     const {filterState,filterdispatch} = useProudctFilter();
   return (
-    <div>
+    <div className='asideContaner'>
           <ul className="aside-filter pl-m flex flex-row">
                 <h3 className="font-l f-m">Filters</h3>
                 <div className="aside-clear f-m font-l mr-s">Clear</div>
@@ -21,19 +21,27 @@ const Filter = () => {
                 <h3 className=" pb-m flex f-m font-l">Category</h3>
                 <div className='flex flex-column'>
                 <div className='checkboxes'>
-                    <input type="checkbox" checked="" />
-                   <label htmlFor="Games"> Games</label>
+                    <input type="checkbox" checked={filterState.Game}
+                    onChange={(e) => filterdispatch({type: "Game"})}
+                     />
+                   <label htmlFor="Game"> Game</label>
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked="" />
+                    <input type="checkbox" checked={filterState.Accessories}
+                    onChange = {(e) => filterdispatch({type :'accessories' }) }
+                     />
                  <label htmlFor="Accessories"> Accessories</label>     
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked="" />
+                    <input type="checkbox" checked={filterState.VR} 
+                    onChange = {(e) => filterdispatch({type : 'vr'})}
+                    />
                  <label htmlFor="VR"> VR</label>     
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked="" />
+                    <input type="checkbox" checked={filterState.Console}
+                    onChange = {(e) => filterdispatch({ type : 'console'})}
+                    />
                  <label htmlFor="Console"> Console</label>     
                 </div>
              </div>
@@ -42,7 +50,7 @@ const Filter = () => {
                 <h3 className="f-m font-l pb-m flex">Rating</h3>
                <div className='flex flex-column'>
                 <div className='checkboxes'>
-                    <input type="radio" checked="" />
+                    <input type="radio" />
                     <label> 4 ⭐ & above</label>
                 </div >
                 <div className="checkboxes pt-s">

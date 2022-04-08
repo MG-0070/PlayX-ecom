@@ -7,6 +7,10 @@ const FilterContext = createContext();
 const ProductFilterProvider = ({children}) =>{
   const [filterState,filterdispatch] = useReducer(ProdutFilterRed,{
       sortBy: "",
+      Game : false,
+      Accessories : false,
+      VR : false,
+      Console : false
   })
 return(
     <FilterContext.Provider value={{filterState,filterdispatch}}>

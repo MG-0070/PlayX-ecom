@@ -4,14 +4,15 @@ import { ProdCard } from '../../Components/ProdCard/ProdCard';
 import { useProudctFilter } from '../../Context/FilterCont';
 import { useProduct } from '../../Context/ProductCont';
 import {SortedProduct} from "../../Utils/SortedProduct"
+import {CategoryList} from  "../../Utils/CategoryList"
 import "./Products.css";
 
 const Products = () => {
 const {prodData} = useProduct();
 const {filterState} = useProudctFilter()
 const {sortBy} = filterState;
-console.log(sortBy,"here")
-const sortedData = SortedProduct(prodData,sortBy)
+const categoryData = CategoryList(prodData,filterState)
+const sortedData = SortedProduct(categoryData,sortBy);
   return (
     <div>
       <div>
@@ -21,7 +22,7 @@ const sortedData = SortedProduct(prodData,sortBy)
       <Filter />
     </aside>
     <div className="center-container flex mt-l ml-m mb-l mr-m">
-      {sortedData .map(cardData => {
+      {sortedData.map(cardData => {
       return(
       <ProdCard prod={cardData} key={cardData._id}/>
       )

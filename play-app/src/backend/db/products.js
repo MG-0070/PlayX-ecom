@@ -11,7 +11,7 @@ export const products = [
     title: "Assasins Creed",
     previousPrice: 6000,
     newPrice : 3000,
-    categoryName: "Game ",
+    categoryName: "Game",
     discount : 50,
     rating : 4,
     image: "https://res.cloudinary.com/aniket-singh/image/upload/v1649011352/Images/apps.52808.69748098540497451.a03a4b64-603b-49b8-8644-4924ac7f3076_co0mlx.jpg",
