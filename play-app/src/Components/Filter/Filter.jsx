@@ -15,31 +15,31 @@ const Filter = () => {
                 <h2 className="font-l flex f-m mb-s">price</h2>
                 <div className="aside-productPrice pt-s flex"><span>रु300</span><span>रु4500</span><span>रु9000</span>
                 </div>
-                <input type="range" min="300" max="1000" value="" className="aside-slider mt-s" />
+                <input type="range" min="300" max="1000"  className="aside-slider mt-s" />
             </div>
             <div className="mt-m pl-m  " >
                 <h3 className=" pb-m flex f-m font-l">Category</h3>
                 <div className='flex flex-column'>
                 <div className='checkboxes'>
-                    <input type="checkbox" checked={filterState.Game}
+                    <input type="checkbox" className="input-checkbox" checked={filterState.Game}
                     onChange={(e) => filterdispatch({type: "Game"})}
                      />
                    <label htmlFor="Game"> Game</label>
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked={filterState.Accessories}
+                    <input type="checkbox" className="input-checkbox" checked={filterState.Accessories}
                     onChange = {(e) => filterdispatch({type :'accessories' }) }
                      />
                  <label htmlFor="Accessories"> Accessories</label>     
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked={filterState.VR} 
+                    <input type="checkbox" className="input-checkbox" checked={filterState.VR} 
                     onChange = {(e) => filterdispatch({type : 'vr'})}
                     />
                  <label htmlFor="VR"> VR</label>     
                 </div>
                 <div className="pt-s checkboxes">
-                    <input type="checkbox" checked={filterState.Console}
+                    <input type="checkbox" className="input-checkbox" checked={filterState.Console}
                     onChange = {(e) => filterdispatch({ type : 'console'})}
                     />
                  <label htmlFor="Console"> Console</label>     
@@ -50,19 +50,19 @@ const Filter = () => {
                 <h3 className="f-m font-l pb-m flex">Rating</h3>
                <div className='flex flex-column'>
                 <div className='checkboxes'>
-                    <input type="radio" />
+                    <input type="radio" value='4' onChange={(e) => filterdispatch({type: 'rating',payload: e.target.value})} checked={filterState.rating === '4'} className='input-star'/>
                     <label> 4 ⭐ & above</label>
                 </div >
                 <div className="checkboxes pt-s">
-                    <input type="radio" />
+                    <input type="radio" value='3' onChange={(e) => filterdispatch({type: 'rating',payload : e.target.value})} checked={filterState.rating === '3'} className='input-star'/>
                     <label> 3 ⭐ & above</label>
                 </div>
                 <div className="checkboxes pt-s">
-                    <input type="radio" />
+                    <input type="radio" value='2' onChange={(e) => filterdispatch({type: 'rating',payload: e.target.value})} checked={filterState.rating === '2'} className='input-star' />
                     <label> 2 ⭐ & above</label>
                 </div>
                 <div className="checkboxes pt-s">
-                    <input type="radio"/>
+                    <input type="radio"  value='1' onChange={(e) => filterdispatch({type:'rating', payload: e.target.value})} checked={filterState.rating === "1"} className='input-star' />
                     <label> 1 ⭐ & above</label>
                 </div>
              </div>

@@ -13,6 +13,8 @@ export const ProdutFilterRed=(state,action) =>{
                 return {...state, VR : !state.VR}
                 case "console":
                     return {...state, Console : !state.Console}
+                case "rating":
+                    return {...state, rating: action.payload}
         default: 
         return state
     }

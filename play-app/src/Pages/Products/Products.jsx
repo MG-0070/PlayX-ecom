@@ -6,17 +6,19 @@ import { useProduct } from '../../Context/ProductCont';
 import {SortedProduct} from "../../Utils/SortedProduct"
 import {CategoryList} from  "../../Utils/CategoryList"
 import "./Products.css";
+import { RatingProduct } from '../../Utils/RatingProduct';
 
 const Products = () => {
 const {prodData} = useProduct();
 const {filterState} = useProudctFilter()
-const {sortBy} = filterState;
+const {sortBy,rating} = filterState;
 const categoryData = CategoryList(prodData,filterState)
-const sortedData = SortedProduct(categoryData,sortBy);
+const ratingData = RatingProduct(categoryData,rating)
+const sortedData = SortedProduct(ratingData,sortBy);
   return (
     <div>
       <div>
-        <h3 className='mt-l f-m font-xl' style={{color: 'var(--primary-color)'}}>Showing all Products()</h3>
+      <h3 className='mt-l f-m font-xl' style={{color: 'var(--primary-color)'}}>Showing all Products()</h3>
     <main className="product-container flex">
     <aside className="aside-container pt-l ">
       <Filter />

@@ -21,7 +21,20 @@
 }
 .aside-slider{
     width: 100%;
+    cursor: pointer;
 }
 .checkboxes{
     align-self: flex-start;
+}
+.input-checkbox{
+    cursor: pointer;
+}
+.input-star{
+    cursor: pointer;
+}
+#low{
+    cursor: pointer;
+}
+#High{
+    cursor: pointer;
 }
