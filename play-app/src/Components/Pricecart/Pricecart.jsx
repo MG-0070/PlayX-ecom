@@ -23,7 +23,7 @@ const Pricecart = () => {
             </div>
             <div class="p-s font-xxl">You will save रु3000 on this order </div>
             <div class="flex flex-center mt-s mb-s">
-                <button class="cart-orderBtn p-xs ">Place Order</button>
+                <button class="cart-orderBtn p-xs font-s f-s ">Place Order</button>
             </div>
         </div> 
  </div>

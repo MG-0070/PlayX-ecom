@@ -22,8 +22,8 @@ const Cartcard = () => {
                     <button  className="cart-btn br-s pl-s font-l">-</button>
                 </div>
                 <div  className="card-click">
-                    <button  className="card-cart-btn p-xs f-s font-s">Add to cart</button>
-                    <button  className="card-whislist-btn p-xs f-s font-s mt-s">Remove from whislist </button>
+                    <button  className="card-cart-btn p-xs f-s font-s">Remove from Cart</button>
+                    <button  className="card-whislist-btn p-xs f-s font-s mt-s">Move to whislist </button>
                 </div>
             </div>
         </div>
