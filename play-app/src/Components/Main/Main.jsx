@@ -4,7 +4,7 @@ import "./Main.css"
 const Main=()=> {
     return (
     <div> 
-    <h2 className="f-m font-xl m-l"style= {{ color: "var(--primary-color)"}} > Category </h2> 
+    <h2 className="f-m font-xl m-l categ-name" > Category </h2> 
      <div className='category-container flex m-l flex-center '>
         <button className='category-game'>
           <img className='category-img' src='https://res.cloudinary.com/aniket-singh/image/upload/v1649406686/Images/download_yrebfk.png' alt="Game" />
@@ -23,7 +23,7 @@ const Main=()=> {
             <div className='f-m font-l'>Vr</div>
         </button>
     </div>
-      <h2 className="f-m font-xl m-l"style= {{ color: "var(--primary-color)"}} > Products </h2> 
+      <h2 className="f-m font-xl m-l prod-name"> Products </h2> 
         <div className='product-container flex m-l flex-center '>
           <a href="" className='product-card'>
               <div className='card-header'>
@@ -31,8 +31,8 @@ const Main=()=> {
               </div>
               <div className='card-body'>
                   <div className='card-sale-info f-s font-l flex flex-center m-xs'>on sale</div>
-                  <div className='flex f-m font-l' style={{color: 'var(--secondary-color)'}}>Assasins Creed</div>
-                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु2000</div>
+                  <div className='flex f-m font-l card-style-name' >Assasins Creed</div>
+                  <div className='flex f-m font-l m-xs card-style-price' >रु2000</div>
               </div>
           </a>
           <a href="" className='product-card'>
@@ -41,8 +41,8 @@ const Main=()=> {
               </div>
               <div className='card-body'>
                   <div className='card-sale-info f-s font-l flex flex-center m-xs'>on sale</div>
-                  <div className='flex f-m font-l' style={{color: 'var(--secondary-color)'}}>Playstation</div>
-                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु40000</div>
+                  <div className='flex f-m font-l card-style-name'>Playstation</div>
+                  <div className='flex f-m font-l m-xs card-style-price' >रु40000</div>
               </div>
           </a>
           <a href="" className='product-card'>
@@ -51,8 +51,8 @@ const Main=()=> {
               </div>
               <div className='card-body'>
                   <div className='card-sale-info f-s font-l flex flex-center m-xs'>on sale</div>
-                  <div className='flex f-m font-l' style={{color: 'var(--secondary-color)'}}>Heasdset</div>
-                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु6000</div>
+                  <div className='flex f-m font-l card-style-name' >Heasdset</div>
+                  <div className='flex f-m font-l m-xs card-style-price' >रु6000</div>
               </div>
           </a>
           <a href="" className='product-card'>
@@ -61,8 +61,8 @@ const Main=()=> {
               </div>
               <div className='card-body'>
                   <div className='card-sale-info f-s font-l flex flex-center m-xs'>on sale</div>
-                  <div className='flex f-m font-l' style={{color: 'var(--secondary-color)'}}>Oculus Vr</div>
-                  <div className='flex f-m font-l m-xs' style={{color: 'var(--secondary-color)'}}>रु26000</div>
+                  <div className='flex f-m font-l card-style-name' >Oculus Vr</div>
+                  <div className='flex f-m font-l m-xs card-style-price' >रु26000</div>
               </div>
           </a>
         </div>

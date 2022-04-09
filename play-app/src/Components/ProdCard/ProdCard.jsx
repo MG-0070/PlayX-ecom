@@ -10,7 +10,7 @@ const ProdCard = ({prod}) => {
   return ( <div >
     <div className = "cards_withBadge" >
     < div className = "header" >
-      < img className = "card-image_one" src = { image } alt = "" />
+      < img className = "card-image_one" src = { image } alt = "product-image" />
         <span className = "card-icon p-xs br-s" > < FiHeart /> </span> 
     </div>  
        <div className = "card-body flex flex-row " >
