@@ -1,0 +1,40 @@
+.asideContaner{
+    background-color: var(--offwhite);
+    height: 100%;
+    padding-top: 1rem;
+}
+.aside-filter{
+    justify-content: space-between;
+}
+.aside-clear{
+    text-decoration: underline;
+    color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+}
+.aside-clear:hover{
+    color: var(--primary-color-hover)
+}
+
+.aside-productPrice{
+    justify-content: space-between;
+}
+.aside-slider{
+    width: 100%;
+    cursor: pointer;
+}
+.checkboxes{
+    align-self: flex-start;
+}
+.input-checkbox{
+    cursor: pointer;
+}
+.input-star{
+    cursor: pointer;
+}
+#low{
+    cursor: pointer;
+}
+#High{
+    cursor: pointer;
+}
