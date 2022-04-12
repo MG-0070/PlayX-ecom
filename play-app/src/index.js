@@ -7,6 +7,7 @@ import { makeServer } from "./server";
 import { BrowserRouter } from "react-router-dom";
 import { ProductProvider } from "./Context/ProductCont";
 import { ProductFilterProvider } from "./Context/FilterCont";
+import { CartProvider } from "./Context/CartCont";
 
 
 
@@ -19,7 +20,9 @@ root.render(
     <BrowserRouter>
     <ProductProvider>
       <ProductFilterProvider>
+        <CartProvider>
     <App />
+    </CartProvider>
     </ProductFilterProvider>
     </ProductProvider>
     </BrowserRouter>

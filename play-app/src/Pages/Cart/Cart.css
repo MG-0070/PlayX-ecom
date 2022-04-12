@@ -4,4 +4,12 @@
 
 .cart{
     gap: 1rem;
+    justify-content: space-around;
+}
+.ProductLink-cart{
+    justify-content: center;
+    align-items: center;
+}
+.ProductLink{
+    color: var(--primary-color);
 }
