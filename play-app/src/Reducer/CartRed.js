@@ -13,5 +13,21 @@ export const CartRed = (state,action) => {
           return{
             ...state,wishList:state.wishList.filter((item) => item._id !== action.payload)
           }
+          case "remove-from-cart":
+            return{
+              ...state,cart:state.cart.filter((item) => item._id !== action.payload)
+            }
+            case "increase-quantity":
+              return{
+                ...state,cart:state.cart.map((product) => product._id === action.payload ?
+                {...product, qty: product.qty + 1 }: product)
+              }
+              case "decrease-quantity":
+              return{
+                ...state,cart:state.cart.map((product) => product._id === action.payload ?
+                {...product, qty: product.qty - 1 }: product)
+              }
+              default:
+                return state;
   }
 }
