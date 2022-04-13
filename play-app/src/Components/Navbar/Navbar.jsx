@@ -8,7 +8,7 @@ import { useCart } from '../../Context/CartCont';
 
 const Navbar = () => {
     const {cartState} = useCart();
-    const{cart} = cartState;
+    const{cart, wishList} = cartState;
   return (
     <div>         
     <nav className="nav-conatainer flex  flex-row p-xs">
@@ -28,7 +28,7 @@ const Navbar = () => {
        className="nav-love-icon pl-l">
            <Link to='/wishList' className="nav-loveicon-a"><FaHeart className='large_icon' /></Link>
            <span 
-           className="nav-number f-s br-s">0</span>
+           className="nav-number f-s br-s">{ wishList.length}</span>
        </li>
        <li 
        className="pl-l">

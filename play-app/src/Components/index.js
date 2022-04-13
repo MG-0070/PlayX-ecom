@@ -7,4 +7,5 @@ import { Filter } from "./Filter/Filter";
 import { Cartcard } from "./Cartcard/Cartcard";
 import { Pricecart } from "./Pricecart/Pricecart";
 
+
 export {Navbar,Header,Main,Footer,ProdCard,Filter,Cartcard,Pricecart};

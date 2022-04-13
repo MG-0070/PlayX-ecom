@@ -6,6 +6,7 @@ const CartContext = createContext();
 const CartProvider = ({children}) =>{
     const [cartState,cartDispatch] = useReducer(CartRed,{
         cart : [],
+        wishList : []
     })
    
     return(
