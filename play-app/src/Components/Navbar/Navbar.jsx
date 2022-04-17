@@ -3,9 +3,12 @@ import "./Navbar.css";
 import { Link } from 'react-router-dom';
 
 import { FaHeart,FaShoppingCart,FaUser } from "react-icons/fa";
+import { useCart } from '../../Context/CartCont';
 
 
 const Navbar = () => {
+    const {cartState} = useCart();
+    const{cart, wishList} = cartState;
   return (
     <div>         
     <nav className="nav-conatainer flex  flex-row p-xs">
@@ -25,7 +28,7 @@ const Navbar = () => {
        className="nav-love-icon pl-l">
            <Link to='/wishList' className="nav-loveicon-a"><FaHeart className='large_icon' /></Link>
            <span 
-           className="nav-number f-s br-s">0</span>
+           className="nav-number f-s br-s">{ wishList.length}</span>
        </li>
        <li 
        className="pl-l">
@@ -33,7 +36,7 @@ const Navbar = () => {
            className="badge">
                <Link to='/cart' className="nav-bag-icon"> <FaShoppingCart className='large_icon'/></Link>
                <span 
-               className="badge-greenNumber br-s">0</span>
+               className="badge-greenNumber br-s">{cart.length}</span>
            </div>
        </li>
    </ul>

@@ -1,6 +1,4 @@
-.card-icon:hover{
-    color: var(--danger-color);
-}
+
 .card-body {
     justify-content: space-between;
 }
