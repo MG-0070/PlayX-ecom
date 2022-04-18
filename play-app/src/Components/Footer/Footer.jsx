@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Footer.css";
 import {FaTwitter,FaGithub} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -28,10 +29,10 @@ const Footer = () => {
       <div className=' p-s'>
           <ul className='fotter-content'>
               <li className='f-m font-xl '>Playx-store</li>
-              <li>Products</li>
-              <li>Account</li>
-              <li>WishLisht</li>
-              <li>Order</li>
+             <Link to='/products' style={{color: 'var(--offwhite)'}}><li>Products</li></Link> 
+           <Link to='/cart' style={{color: 'var(--offwhite)'}}><li>Cart</li></Link>
+           <Link to='/wishlist' style={{color: 'var(--offwhite)'}}> <li>WishLisht</li></Link> 
+            <Link to='/login' style={{color: 'var(--offwhite)'}}><li>Login</li></Link> 
           </ul>
       </div>
     </div>
