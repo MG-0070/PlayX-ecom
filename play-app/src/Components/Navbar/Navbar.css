@@ -53,6 +53,14 @@
 .nav-bag-icon {
     color: var(--secondar-color);
 }
+.logout_btn{
+    border: none;
+    cursor: pointer;
+    background-color: var(--offwhite);
+}
+.logout_btn:hover{
+    color: var(--primary-color-hover);
+}
 
 @media screen and (max-width: 40em){
      .nav-brand{

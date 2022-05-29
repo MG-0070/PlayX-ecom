@@ -5,11 +5,12 @@ import {
   FiStar
 } from "react-icons/fi";
 import {AiFillHeart} from "react-icons/ai";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from '../../Context/CartCont';
 import { IteminList } from '../../Utils/CartUtils/IteminList';
 import axios from 'axios';
 import { itemWishlist } from "../../Utils/CartUtils/itemWishlist";
+import { useAuth } from "../../Context/AuthContext";
 
 
 const ProdCard = ({product}) => {
@@ -17,37 +18,45 @@ const {cartState,cartDispatch} = useCart();
 const{_id,image,title,rating,newPrice,previousPrice,discount,} = product;
 const IsIteminyourList = IteminList(_id,cartState.cart);
 const itemInYourWishlist = itemWishlist(_id,cartState.wishList );
+const {user,encodedToken} = useAuth();
+const navigate = useNavigate();
+const location = useLocation()
 
 const addtoCartHandler =async (product) =>{
-  {
-  try{
-       const response= await axios.post("api/user/cart",{product}, 
-       {
-        headers: { authorization: process.env.REACT_APP_ENCODED_TOKEN}
-      });
-      cartDispatch({type: "add-to-cart", payload : product}) 
-   }
-
-   catch(error){
-     console.log(error.response);
-   }}
+  if(user){
+    try{
+      const response= await axios.post("api/user/cart",{product}, 
+      {
+       headers: { authorization: encodedToken}
+     });
+     cartDispatch({type: "add-to-cart", payload : product}) 
   }
+  catch(error){
+    console.log(error.response);
+  }
+  }else{
+    navigate("/login", { replace: true, state: { from: location } })
+  }
+  }
+  
 
   const addToWishlist=async(product)=>{
-    {
+    if(user){
       try{
-       const result = await axios.post("/api/user/wishlist",{product},{
-         headers : {
-          authorization: process.env.REACT_APP_ENCODED_TOKEN
-         }
-       })
-       cartDispatch({type: "add-to-wishlist", payload: product})
-      }
-      catch(e){
-       console.log(e.result)
-      }
+        const response = await axios.post("/api/user/wishlist",{product},{
+          headers : {
+           authorization: encodedToken
+          }
+        })
+        cartDispatch({type: "add-to-wishlist", payload: product})
+       }
+       catch(e){
+        console.log(e.result)
+       }
+    }else{
+      navigate("/login", { replace: true, state: { from: location } })
     }
-    
+
   }
   
   const removeFromWishlist = async(_id) =>{
@@ -55,7 +64,7 @@ const addtoCartHandler =async (product) =>{
      try {
        const removeResponse = await axios.delete(`api/user/wishlist/${_id}`,{
         headers : {
-          authorization: process.env.REACT_APP_ENCODED_TOKEN
+          authorization: encodedToken
          }
        })
        cartDispatch({type : "delete-from-wishlist" , payload: _id})

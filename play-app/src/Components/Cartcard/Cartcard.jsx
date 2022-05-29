@@ -4,23 +4,25 @@ import {BiMinus} from "react-icons/bi";
 import { useCart } from "../../Context/CartCont";
 import axios from "axios";
 import { itemWishlist } from "../../Utils/CartUtils/itemWishlist";
+import { useAuth } from "../../Context/AuthContext";
 
 const Cartcard = ({product}) => {
     const {_id,image,title,newPrice,previousPrice,discount,qty} = product;
     const {cartState,cartDispatch} = useCart();
     const itemInYourWishlist = itemWishlist(_id,cartState.wishList );
+    const {encodedToken} = useAuth()
 
    const deleteFromCart= async(_id)=>{
      {
          try {
-            const cartResponse = await axios.delete(`api/user/wishlist/${_id}`,{
+            const response = await axios.delete(`api/user/wishlist/${_id}`,{
                 headers : {
-                    authorization: process.env.REACT_APP_ENCODED_TOKEN
+                    authorization: encodedToken
                    }
              })
             cartDispatch({type: 'remove-from-cart',payload: _id})
          } catch (error) {
-             console.log(error.cartResponse)
+             console.log(error.response)
          }
      }
    }

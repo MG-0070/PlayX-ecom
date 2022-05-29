@@ -13,27 +13,27 @@ const Pricecart = () => {
   const totalAmount = totalPrice + 500 - discount;
   return (
     <div>
-        <div class="cart-price ">
-            <div class="cart-priceHeading f-m font-xl mt-l pb-s ml-s pt-s">PRICE DETAILS</div>
-            <div class="cart-info flex pl-s pr-s mt-s mb-s font-l">
+        <div className="cart-price ">
+            <div className="cart-priceHeading f-m font-xl mt-l pb-s ml-s pt-s">PRICE DETAILS</div>
+            <div className="cart-info flex pl-s pr-s mt-s mb-s font-l">
                 <span>PRICE ({totalQuantity} items)</span>
                 <span>रु{totalPrice}</span>
             </div>
-            <div class="cart-info flex pl-s pr-s mt-s mb-s font-l">
+            <div className="cart-info flex pl-s pr-s mt-s mb-s font-l">
                 <span>DISCOUNT(10%)</span>
                 <span>-रु{discount}</span>
             </div>
-            <div class="cart-info flex pl-s pr-s mt-s mb-s font-l">
+            <div className="cart-info flex pl-s pr-s mt-s mb-s font-l">
                 <span>Delivery Charges</span>
                 <span>रु500</span>
             </div>
-            <div class="cartinfo-two flex mt-l mb-s p-s font-xxl">
+            <div className="cartinfo-two flex mt-l mb-s p-s font-xxl">
                 <span>TOTAL AMOUNT</span>
                 <span>रु{totalAmount}</span>
             </div>
-            <div class="p-s font-xxl">You will save रु{discount} on this order </div>
-            <div class="flex flex-center mt-s mb-s">
-                <button class="cart-orderBtn p-xs font-s f-s ">Place Order</button>
+            <div className="p-s font-xxl">You will save रु{discount} on this order </div>
+            <div className="flex flex-center mt-s mb-s">
+                <button className="cart-orderBtn p-xs font-s f-s ">Place Order</button>
             </div>
         </div> 
  </div>
