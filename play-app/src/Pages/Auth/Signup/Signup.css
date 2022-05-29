@@ -1,4 +1,4 @@
-.login-form {
+.Signup-form {
     border: 1px solid var(--border-color);
     width: 23.5rem;
     height: max-content;
@@ -7,7 +7,7 @@
     text-align: center;
 }
 
-.login-email-label {
+.Signup-email-label {
     float: left;
     padding-left: 2.7rem;
 }
@@ -18,16 +18,40 @@
     border-radius: .2rem;
     border: 1px solid var(--border-color);
 }
+#firstName{
+    width: 80%;
+    height: 1.9rem;
+    border-radius: .2rem;
+    border: 1px solid var(--border-color);
+}
+#lastName{
+    width: 80%;
+    height: 1.9rem;
+    border-radius: .2rem;
+    border: 1px solid var(--border-color);
+}
+#password{
+    width: 80%;
+    height: 1.9rem;
+    border-radius: .2rem;
+    border: 1px solid var(--border-color);
+}
+#confirmpass{
+    width: 80%;
+    height: 1.9rem;
+    border-radius: .2rem;
+    border: 1px solid var(--border-color);
+}
 
-.login-checkbox {
+.Signup-checkbox {
     margin-left: 2.7rem;
 }
 
-.login-text {
+.Signup-text {
     color: var(--primary-color);
 }
 
-.login-btn {
+.Signup-btn {
     width: 79%;
     height: 1.9rem;
     color: var(--offwhite);
@@ -36,6 +60,6 @@
     cursor: pointer;
 }
 
-.login-btn:hover {
+.Signup-btn:hover {
     background-color: var(--primary-color-hover);
 }
