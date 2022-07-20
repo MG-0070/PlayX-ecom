@@ -1,0 +1,14 @@
+.checkout_container{
+    justify-content: space-evenly;
+}
+.address_button{
+    cursor: pointer;
+    width: 100%;
+    background-color: var(--primary-color-hover);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+.address_button:hover{
+    background-color: var(--primary-color);
+}
