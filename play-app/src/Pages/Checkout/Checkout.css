@@ -12,3 +12,28 @@
 .address_button:hover{
     background-color: var(--primary-color);
 }
+.priceManagement{
+    min-width: 25rem;
+}
+.checkout_items{
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1.2rem;
+}
+.checkout_priceItems{
+    justify-content: space-between;
+}
+.checktout_tilePrice{
+    justify-content: space-between;
+}
+.checkout_button{
+    width: 95%;
+     border: none;
+     background-color: var(--primary-color-hover);
+     color: white;
+     cursor: pointer;
+     border-radius: 5px;
+}
+.checkout_button:hover{
+    background-color: var(--primary-color);
+}
