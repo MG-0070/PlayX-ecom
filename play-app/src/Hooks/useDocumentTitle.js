@@ -2,6 +2,6 @@ import {useEffect} from "react";
 
 export const useDocumentTitle = (title) => {
             useEffect(() => {
-         document.title = `PlayX-Ecomm | ${title}`
+         document.title = `PlayX-Store | ${title}`
             },[title])
 }
