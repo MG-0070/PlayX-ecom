@@ -5,8 +5,9 @@ An Ecommerce app for which take of all your gaming needs. here you can buy diffe
 - ReactJs
 -  [PlayXUi](https://playx-ui.netlify.app/index.html) component library
 - [Mockbee](https://mockbee.netlify.app/) for backend
-- React Router
+-  Router v6
 - css
+- Axios
 
 # Live-Link
 - click on this link - [PlayX-Ecom](https://play-x-ecom.vercel.app/products)
@@ -14,9 +15,21 @@ An Ecommerce app for which take of all your gaming needs. here you can buy diffe
 # Features
  - Home Page
  - Product Listing Page
- - Wishlist 
- - Cartmangement
- - Filter page
+ - Wishlist management
+ - Cart management
+ - Filter
+   Price
+ Category
+ Ratings 
+ - sort by price
+ - Authentication
+   Login 
+   Signup
+   Logout
+- Address Management
+- Checkout
+- Alerts
+- Payment Integration
 
  # Installation Steps
  ##  1. Clone the app
@@ -45,3 +58,4 @@ With that you can see your app running on `localhost:3000`
 ![image](https://res.cloudinary.com/aniket-singh/image/upload/v1650242193/Images/captures_chrome-capture-2022-3-18_4_hkriev.png)
 ![image](https://res.cloudinary.com/aniket-singh/image/upload/v1650242211/Images/captures_chrome-capture-2022-3-18_5_awmpba.png)
 
+# This project is still in progress feel free to come and check of progress .
