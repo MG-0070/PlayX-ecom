@@ -4,36 +4,41 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import axios from "axios";
 import { useAuth } from "../../../Context/AuthContext";
+import { useToast } from "../../../Hooks/useToast";
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 
 const Login = () => {
-  const [email,setEmail] = useState("");
-  const [password,setPassword] = useState("");
-  const [showpass,setShowPass] = useState(false);
-  const [error,setError] = useState(null);
-  const {setUser} = useAuth()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [showpass, setShowPass] = useState(false);
+  const [error, setError] = useState(null);
+  const { setUser } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+  const { showToast } = useToast();
+  useDocumentTitle("login")
 
-    const loginHandler = async(e) => {
-          e.preventDefault()
-          try {
-            const response = await axios.post("api/auth/login",{
-              email,
-           password
-            })
-            localStorage.setItem("token",response.data.encodedToken)
-            setUser(response.data.foundUser)
-            navigate(location.state?.from?.pathname ?? "/", { replace: true })
-          } catch (error) {
-            console.log(error.response)
-            setError("something went worng 🥺")
-          }  
+  const loginHandler = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post("api/auth/login", {
+        email,
+        password,
+      });
+      localStorage.setItem("token", response.data.encodedToken);
+      setUser(response.data.foundUser);
+      navigate(location.state?.from?.pathname ?? "/", { replace: true });
+      showToast("success", "Logged In!");
+    } catch (error) {
+      showToast("error", error.response.data.errors[0]);
+      setError("something went worng 🥺");
     }
-   
-   const loginAsGuestHandler = () =>{
+  };
+
+  const loginAsGuestHandler = () => {
     setEmail("aniketSingh@gmail.com");
-    setPassword("aniketSingh")
-   }
+    setPassword("aniketSingh");
+  };
 
   const disablefield = email !== "" && password !== "";
 
@@ -80,10 +85,18 @@ const Login = () => {
           <h3 className="login-text pl-s font-xs">Forgot your password?</h3>
         </div>
         <div className="mt-l">
-          <button className="login-btn f-s" type="submit" disabled={!disablefield}>Login</button>
+          <button
+            className="login-btn f-s"
+            type="submit"
+            disabled={!disablefield}
+          >
+            Login
+          </button>
         </div>
         <div className="mt-l">
-          <button className="login-btn f-s" onClick={loginAsGuestHandler}>Login as Guest</button>
+          <button className="login-btn f-s" onClick={loginAsGuestHandler}>
+            Login as Guest
+          </button>
         </div>
         <div className="mt-l mb-l">
           <Link to="/signup" className="f-s">

@@ -8,6 +8,7 @@ import { Cartcard } from "./Cartcard/Cartcard";
 import { Pricecart } from "./Pricecart/Pricecart";
 import AddressCard from "./AddressCard/AddressCard";
 import { AddressForm } from "./AddressForm/AddressForm";
+import Toast from "./Toast/Toast";
 
 
-export {Navbar,Header,Main,Footer,ProdCard,Filter,Cartcard,Pricecart,AddressCard,AddressForm};
+export {Navbar,Header,Main,Footer,ProdCard,Filter,Cartcard,Pricecart,AddressCard,AddressForm,Toast};

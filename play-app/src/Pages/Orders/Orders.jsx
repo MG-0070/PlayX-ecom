@@ -2,6 +2,7 @@ import React from "react";
 import { useOrder } from "../../Context/Order-Context";
 import { useNavigate } from "react-router-dom";
 import "./Orders.css";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 const Orders = () => {
   const { orderState } = useOrder();
@@ -9,6 +10,7 @@ const Orders = () => {
   const { order } = orderState;
   const { orderId, paymentId, totalAmount, address, items } = order;
   const { name, city, addState, country, pincode, phone } = address ?? {};
+  useDocumentTitle("Order")
 
   return (
     <div>

@@ -3,10 +3,12 @@ import "./Cart.css"
 import { Cartcard, Pricecart } from '../../Components'
 import { useCart } from '../../Context/CartCont'
 import { Link } from 'react-router-dom'
+import { useDocumentTitle } from '../../Hooks/useDocumentTitle'
 
 const Cart = () => {
   const { cartState} = useCart();
   const {cart} = cartState;
+  useDocumentTitle("Cart")
 
 
   return (

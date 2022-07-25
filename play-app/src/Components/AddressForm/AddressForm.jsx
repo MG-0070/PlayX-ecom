@@ -5,6 +5,8 @@ import { ImCross } from "react-icons/im";
 import { AddressRed } from "../../Reducer/AddressRed";
 import { useAddress } from "../../Context/Address";
 import { v4 as uuid } from "uuid";
+import { useToast } from "../../Hooks/useToast";
+
 
 export const AddressForm = ({ setIsAddress }) => {
   const [state, dispatch] = useReducer(AddressRed, {
@@ -18,6 +20,7 @@ export const AddressForm = ({ setIsAddress }) => {
 
   const { setAddress } = useAddress();
   const { name, city, addState, country, pincode, phone } = state;
+  const {showToast} = useToast()
 
   const addressHandler = (e) => {
     e.preventDefault();
@@ -28,6 +31,7 @@ export const AddressForm = ({ setIsAddress }) => {
     };
     setAddress((prevAddress) => [...prevAddress, newAddress]);
     setIsAddress(false);
+    showToast("success","Address added successfully")
   };
 
   return (
