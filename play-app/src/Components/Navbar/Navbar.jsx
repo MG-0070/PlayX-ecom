@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 import { FaHeart, FaShoppingCart, FaUser } from "react-icons/fa";
 import { useCart } from "../../Context/CartCont";
 import { useAuth } from "../../Context/AuthContext";
+import { useToast } from "../../Hooks/useToast";
 
 const Navbar = () => {
   const { cartState } = useCart();
   const { cart, wishList } = cartState;
   const { user, setUser } = useAuth();
+  const {showToast} = useToast()
 
   const logoutHandler = () => {
     localStorage.removeItem("token");
     setUser(null);
+    showToast("success","Logged out!")
   };
 
   return (

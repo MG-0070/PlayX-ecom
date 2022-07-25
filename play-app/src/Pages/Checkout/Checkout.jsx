@@ -9,6 +9,7 @@ import { v4 as uuid } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
 import { useOrder } from "../../Context/Order-Context";
+import { useToast } from "../../Hooks/useToast";
 
 const Checkout = () => {
   const { address } = useAddress();
@@ -21,6 +22,7 @@ const Checkout = () => {
   const { orderDispatch } = useOrder();
   const navigate = useNavigate();
   const { user } = useAuth();
+  const {showToast} = useToast();
 
   const loadScript = (url) => {
     return new Promise((resolve) => {
@@ -61,6 +63,7 @@ const Checkout = () => {
         if (razorpay_payment_id) {
           cartDispatch({ type: "CLEAR_CART" });
           navigate("/order");
+          showToast("success","payment is succesfull")
         }
       },
       prefill: {

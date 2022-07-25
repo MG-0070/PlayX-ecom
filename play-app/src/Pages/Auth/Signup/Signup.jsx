@@ -4,6 +4,7 @@ import SignupReducer from "../../../Reducer/SignupReducer";
 import "./Signup.css";
 import axios from "axios";
 import { useAuth } from "../../../Context/AuthContext";
+import { useToast } from "../../../Hooks/useToast";
 
 const Signup = () => {
   const [state, dispatch] = useReducer(SignupReducer, {
@@ -18,6 +19,7 @@ const Signup = () => {
   const [showPass, setShowPass] = useState(false);
   const { setUser } = useAuth();
   const navigate = useNavigate();
+  const { showToast } = useToast();
 
   const signupHandler = async (e) => {
     e.preventDefault();
@@ -30,10 +32,10 @@ const Signup = () => {
       });
       localStorage.setItem("token", response.data.encodedToken);
       setUser(response.data.createdUser);
-      console.log(response);
       navigate("/", { replace: true });
+      showToast("success", "Account Created and Logged In!");
     } catch (error) {
-      console.log(error.response);
+      showToast("error", error.response.data.errors[0]);
       setError("somethig went wrong 🥺");
     }
   };
