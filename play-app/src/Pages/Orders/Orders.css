@@ -1,0 +1,20 @@
+.orderSuccessContainer{
+    width: 50rem;
+    justify-content: space-around;
+    border: 1px solid var(--border-color);
+    margin: auto;
+}
+.item_image{
+    width: 8rem;
+    height: 8rem;
+}
+.itemContainer{
+    border-bottom: 1px solid var(--border-color);
+}
+.order_btn{
+    cursor: pointer;
+    background-color: var(--primary-color-hover);
+    color: white;
+    border-radius: 10px;
+    border: none;
+}

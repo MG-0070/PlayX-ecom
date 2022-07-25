@@ -31,8 +31,8 @@ const Login = () => {
     }
    
    const loginAsGuestHandler = () =>{
-    setEmail("adarshbalika@gmail.com");
-    setPassword("adarshbalika")
+    setEmail("aniketSingh@gmail.com");
+    setPassword("aniketSingh")
    }
 
   const disablefield = email !== "" && password !== "";

@@ -26,7 +26,9 @@ export const CartRed = (state,action) => {
               return{
                 ...state,cart:state.cart.map((product) => product._id === action.payload ?
                 {...product, qty: product.qty - 1 }: product)
-              }
+              };
+              case "CLEAR_CART":
+                return {...state,cart: []}
               default:
                 return state;
   }
