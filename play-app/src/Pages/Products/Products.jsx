@@ -8,6 +8,7 @@ import {CategoryList} from  "../../Utils/CategoryList"
 import "./Products.css";
 import { RatingProduct } from '../../Utils/RatingProduct';
 import { sliderProduct } from '../../Utils/sliderProduct';
+import { useDocumentTitle } from '../../Hooks/useDocumentTitle';
 
 const Products = () => {
 const {prodData} = useProduct();
@@ -17,6 +18,7 @@ const categoryData = CategoryList(prodData,filterState)
 const ratingData = RatingProduct(categoryData,rating)
 const rangeData = sliderProduct(ratingData,newPrice )
 const sortedData = SortedProduct(rangeData,sortBy);
+useDocumentTitle("Products")
   return (
     <div>
       <div>

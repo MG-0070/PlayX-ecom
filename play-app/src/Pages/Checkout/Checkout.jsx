@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
 import { useOrder } from "../../Context/Order-Context";
 import { useToast } from "../../Hooks/useToast";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 const Checkout = () => {
   const { address } = useAddress();
@@ -23,6 +24,7 @@ const Checkout = () => {
   const navigate = useNavigate();
   const { user } = useAuth();
   const {showToast} = useToast();
+  useDocumentTitle("Checkout")
 
   const loadScript = (url) => {
     return new Promise((resolve) => {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { ProdCard } from '../../Components/ProdCard/ProdCard';
 import { useCart } from '../../Context/CartCont'
+import { useDocumentTitle } from '../../Hooks/useDocumentTitle';
 import "./Wishlist.css";
 
 
 const Wishlist = () => {
    const {cartState} = useCart();
    const {wishList } = cartState;
+   useDocumentTitle("WishList")
   return (
     <div>
      <h2 className='mt-l f-l font-xl'>My WishList({wishList.length})</h2>

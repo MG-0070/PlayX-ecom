@@ -5,6 +5,7 @@ import "./Signup.css";
 import axios from "axios";
 import { useAuth } from "../../../Context/AuthContext";
 import { useToast } from "../../../Hooks/useToast";
+import { useDocumentTitle } from "../../../Hooks/useDocumentTitle";
 
 const Signup = () => {
   const [state, dispatch] = useReducer(SignupReducer, {
@@ -20,6 +21,7 @@ const Signup = () => {
   const { setUser } = useAuth();
   const navigate = useNavigate();
   const { showToast } = useToast();
+  useDocumentTitle("Singup")
 
   const signupHandler = async (e) => {
     e.preventDefault();
