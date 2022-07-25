@@ -17,19 +17,20 @@ An Ecommerce app for which take of all your gaming needs. here you can buy diffe
  - Product Listing Page
  - Wishlist management
  - Cart management
- - Filter
-   Price
- Category
- Ratings 
+  #### Filter
+   -Price
+ - Category
+ - Ratings 
  - sort by price
- - Authentication
-   Login 
-   Signup
-   Logout
+ #### Authentication
+   - Login 
+   - Signup
+   - Logout
 - Address Management
 - Checkout
 - Alerts
-- Payment Integration
+- Payment Integration 
+- order page
 
  # Installation Steps
  ##  1. Clone the app
