@@ -12,7 +12,7 @@ const ProductFilterProvider = ({children}) =>{
       VR : false,
       Console : false,
       rating : 0,
-      newPrice : 0,
+      newPrice : 9000,
   })
 return(
     <FilterContext.Provider value={{filterState,filterdispatch}}>

@@ -1,24 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Main.css";
 import { Link } from "react-router-dom";
+import { useProudctFilter } from "../../Context/FilterCont";
 
 const Main = () => {
+ const {filterdispatch} = useProudctFilter()
+
+
   return (
     <div>
       <h2 className="f-m font-xl m-l categ-name"> Category </h2>
       <div className="category-container flex m-l flex-center ">
         <Link to="/products">
-          <button className="category-game">
+          <button className="category-game" onClick={() => filterdispatch({type: "Game"})}>
             <img
               className="category-img"
               src="https://res.cloudinary.com/aniket-singh/image/upload/v1649406686/Images/download_yrebfk.png"
               alt="Game"
             />
-            <div className="f-m font-l">Games</div>
+            <div className="f-m font-l" >Games</div>
           </button>
         </Link>
         <Link to="/products">
-          <button className="category-game">
+          <button className="category-game" onClick={() => filterdispatch({type: "console"})}>
             <img
               className="category-img"
               src="https://res.cloudinary.com/aniket-singh/image/upload/v1649406768/Images/console_ewmjgf.png"
@@ -28,7 +32,7 @@ const Main = () => {
           </button>
         </Link>
         <Link to="/products">
-          <button className="category-game">
+          <button className="category-game" onClick={() => filterdispatch({type: "accessories"})}>
             <img
               className="category-img"
               src="https://res.cloudinary.com/aniket-singh/image/upload/v1649406839/Images/1024px-Headphone_icon.svg_k4r5ko.png"
@@ -38,7 +42,7 @@ const Main = () => {
           </button>
         </Link>
         <Link to="/products">
-          <button className="category-game">
+          <button className="category-game" onClick={() => filterdispatch({type: "vr"})}>
             <img
               className="category-img"
               src="https://res.cloudinary.com/aniket-singh/image/upload/v1649406893/Images/download_1_xjexl4.png"

@@ -25,7 +25,7 @@ export const ProdutFilterRed=(state,action) =>{
                      VR : false,
                  Console : false,
                   rating : 0,
-                   newPrice : 0,
+                   newPrice : 9000,
                         }
                 default: 
                return state
