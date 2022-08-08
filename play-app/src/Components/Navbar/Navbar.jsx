@@ -27,15 +27,15 @@ const Navbar = () => {
             PlayX
           </Link>
         </div>
-        <form className="p-s">
+        {/* <form className="p-s">
           <input
             className="nav-input font-xl f-m"
             type="search"
             name="search"
             placeholder="Search.."
           />
-        </form>
-        <ul className="nav-right flex p-s">
+        </form> */}
+        <ul className="nav-right flex p-s mr-m">
           <li className="pl-m">
             {user ? (
               <button

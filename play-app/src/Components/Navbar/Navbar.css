@@ -1,6 +1,6 @@
 
 .nav-conatainer {
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: var(--offwhite);
     position: sticky;
     top: 0;
@@ -12,6 +12,7 @@
 
 .nav-brand-a {
     color: var(--secondar-color);
+    margin-left: 2rem;
 }
 
 .nav-login-btn {

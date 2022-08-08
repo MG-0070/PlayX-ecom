@@ -2,8 +2,12 @@ import React from "react";
 import "./Header.css";
 import { FaAngleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useProudctFilter } from "../../Context/FilterCont";
 
 const Header = () => {
+ 
+  const {filterdispatch} = useProudctFilter();
+
   return (
     <div>
       <div className="scroll-images">
@@ -14,7 +18,7 @@ const Header = () => {
         />
         <div className="scroll-btn">
           <Link to="/products" className="scrll-btn-link f-l flex">
-            <span className="header-link-name f-m">Get it now</span>{" "}
+            <span className="header-link-name f-m" onClick={() => filterdispatch({type: "clearAll"})}>Get it now</span>{" "}
             <FaAngleRight />
           </Link>
         </div>
