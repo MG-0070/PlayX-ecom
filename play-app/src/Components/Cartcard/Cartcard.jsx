@@ -92,7 +92,7 @@ const Cartcard = ({ product }) => {
               className="card-whislist-btn p-xs f-s font-s mt-s"
               onClick={() => moveToWishlist(product)}
             >
-              Move to whislist{" "}
+              Move to Wishlist{" "}
             </button>
           </div>
         </div>
