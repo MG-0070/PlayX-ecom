@@ -77,7 +77,7 @@ const Signup = () => {
           />
         </div>
         <div className=" mt-l ">
-          <label className="Signup-email-label font-s">Email Address</label>
+          <label className="Signup-email-label font-s">Username</label>
           <input
             type="text"
             className="f-s mt-s "
@@ -144,8 +144,9 @@ const Signup = () => {
             id="remember"
             name="remember"
             className="Signup-checkbox"
+            required
           />
-          <label className="Signup-text font-l f-s pl-s">
+          <label className="Signup-text font-l f-s pl-s" >
             I accept all term & conditions
           </label>
         </div>

@@ -47,7 +47,7 @@ const Login = () => {
       <form className="login-form  pt-l" onSubmit={loginHandler}>
         <div className="f-m font-xxl mb-s">Login</div>
         <div className=" mt-l ">
-          <label className="login-email-label font-s">Email Address</label>
+          <label className="login-email-label font-s">Username</label>
           <input
             type="text"
             className="f-s mt-s "
